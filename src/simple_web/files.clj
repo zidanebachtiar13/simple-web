@@ -1,5 +1,4 @@
-(ns simple-web.files
-  (:require [clojure.string :as st]))
+(ns simple-web.files)
 
 (def txt (atom []))
 
