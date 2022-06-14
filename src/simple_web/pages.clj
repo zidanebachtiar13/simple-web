@@ -1,5 +1,5 @@
 (ns simple-web.pages
-  (:require [hiccup.page :refer :all]
+  (:require [hiccup.page :refer [html5 include-css]]
             [hiccup.form :as form]
             [ring.util.anti-forgery :refer (anti-forgery-field)]))
 
