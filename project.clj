@@ -5,7 +5,8 @@
   :dependencies [[org.clojure/clojure "1.10.0"]
                  [compojure "1.6.1"]
                  [ring/ring-defaults "0.3.2"]
-                 [hiccup "2.0.0-alpha2"]]
+                 [hiccup "2.0.0-alpha2"]
+                 [garden "1.3.10"]]
   :plugins [[lein-ring "0.12.5"]]
   :ring {:handler simple-web.handler/app}
   :profiles
