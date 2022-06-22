@@ -8,9 +8,8 @@
 
 (defroutes app-routes
   (GET "/" [] (page/index file/txt))
-  (POST "/" [note] 
-        (do (file/add note)
-            (resp/redirect "/")))
+  (POST "/" [note] (do (file/add note)
+                       (resp/redirect "/")))
   (route/not-found "Not Found"))
 
 (def app
