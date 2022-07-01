@@ -10,7 +10,6 @@
         {:width "20%"
          :margin "10px 10px 20px 40px"
          :padding "10px"
-         :display "inline-block"
          :border "1px solid #ccc"
          :border-radius "4px"
          :box-sizing "border-box"}]
@@ -27,7 +26,11 @@
         {:border "1px solid black"
          :border-radius "5px"
          :padding "15px"
-         :text-align "center"}]))
+         :text-align "center"}]
+       [:.absolute
+        {:position "absolute"
+         :top "66px"
+         :left "430px"}]))
 
 (defn base-page [& body]
   (html5
@@ -36,13 +39,18 @@
      [:style style]]
     [:body
      (form/form-to
-       [:post "/"]
+       [:post "/tambah"]
        [:br]
        (form/label "note" "Input message")
        [:br]
        (form/text-field "note")
        (anti-forgery-field)
        (form/submit-button "submit"))
+     [:div.absolute
+      (form/form-to
+        [:post "/reset"]
+        (anti-forgery-field)
+        (form/submit-button "reset"))]
      [:hr]
      body]))
 
