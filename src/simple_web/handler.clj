@@ -7,7 +7,7 @@
             [simple-web.files :as file]))
 
 (defroutes app-routes
-  (GET "/" [] (page/index file/txt))
+  (GET "/" [] (page/base-page file/txt))
   (POST "/tambah" [note] (do (file/add note)
                              (resp/redirect "/")))
   (POST "/reset" [] (do (file/reset)
