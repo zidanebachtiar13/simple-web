@@ -6,6 +6,7 @@
 (defn base-page [notes]
   (html5
     [:head 
+     [:meta {:name "viewport" :content "width=device-width, initial-scale=1"}]
      [:title "Simple Web"]
      (include-css "css/style.css")]
     [:body
